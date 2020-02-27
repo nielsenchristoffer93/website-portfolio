@@ -1,8 +1,17 @@
+/* ----------------------------------------------- */
+/* -------------- PROJECT COLORS ----------------- */
+/* ----------------------------------------------- */
+
 :root {
     --primary-color: rgba(13, 110, 139, 0.75);
     --overlay-color: rgba(24, 39, 51, 0.85);
     --menu-speed: 0.75s;
 }
+
+
+/* ----------------------------------------------- */
+/* ---------------- BASIC SETUP ------------------ */
+/* ----------------------------------------------- */
 
 * {
     box-sizing: border-box;
@@ -10,25 +19,94 @@
     padding: 0;
 }
 
+html,
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', 'Arial', sans-serif;
     line-height: 1.4;
+    text-rendering: optimizeLegibility;
 }
+
+/* ----------------------------------------------- */
+/* ------------- REUSABLE COMPONENTS ------------- */
+/* ----------------------------------------------- */
 
 .row {
     width: 90%;
     height: 60px;
     margin: 0 5%;
-    background: #bc1818;
+    /*background: #bc1818;*/
 }
 
-.logo {
-    display: block;
-    height: 50px;
-    width: auto;
-    margin-top: 5px;
-    float: left;
+/* ------------------- HEADINGS ------------------ */
+
+/* ------------------ PARAGRAPHS ----------------- */
+
+p {
+    font-size: 2rem;
 }
+
+/* -------------------- LOGOS -------------------- */
+
+.logo {
+    position: relative;
+    display: block;
+    height: 40px;
+    width: auto;
+    margin-top: 10px;
+    margin-left: 1em;
+    float: left;
+    z-index: 5;
+}
+
+/* ------------------- BUTTONS ------------------- */
+
+.btn {
+    display: inline-block;
+    border: none;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    transition: opacity 1s ease-in;
+}
+
+.btn:hover {
+    opacity: 0.7;
+}
+
+/* ----------------------------------------------- */
+/* -------------------- HEADER ------------------- */
+/* ----------------------------------------------- */
+
+header {
+    /*background: url(../images/4k-wallpaper-calm-waters-dark-1252869.jpg) no-repeat center center/cover;*/
+    background-image: linear-gradient(rgba(13, 110, 139, 0.75), rgba(13, 110, 139, 0.75)), url(../images/4k-wallpaper-calm-waters-dark-1252869.jpg);
+    background-position: left top;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    max-width: 100%;
+}
+
+#navbar {
+    margin: 0;
+    width: 100%;
+    padding: 0 5%;
+    transition: all 0.5s ease-in-out;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fafafa;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+    transition: background-color 0.5s ease-in-out;
+    transition: box-shadow 1s ease-in-out;
+    z-index: 4;
+}
+
 
 .container {
     max-width: 960px;
@@ -38,21 +116,14 @@ body {
 }
 
 .showcase {
-    background-color: var(--primary-color);
-    color: #fff;
-    height: 100vh;
-    position: relative;
-}
-
-.showcase:before {
-    content: '';
-    background: url(../images/4k-wallpaper-calm-waters-dark-1252869.jpg) no-repeat center center/cover;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #FFF;
 }
 
 .showcase .showcase-inner {
@@ -72,17 +143,3 @@ body {
     font-size: 1.3rem;
 }
 
-.btn {
-    display: inline-block;
-    border: none;
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    margin-top: 1rem;
-    text-decoration: none;
-    transition: opacity 1s ease-in;
-}
-
-.btn:hover {
-    opacity: 0.7;
-}
