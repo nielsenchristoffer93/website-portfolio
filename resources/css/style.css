@@ -3,8 +3,9 @@
 /* ----------------------------------------------- */
 
 :root {
-    --primary-color: rgba(13, 110, 139, 0.75);
+    --primary-color: rgba(13, 110, 139, 0.75); /*  */
     --overlay-color: rgba(24, 39, 51, 0.85);
+    --font-color: rgb(185, 185, 185, 1);
     --menu-speed: 0.75s;
 }
 
@@ -32,12 +33,47 @@ body {
 
 .row {
     width: 90%;
-    height: 60px;
+    /*height: 60px;*/
     margin: 0 5%;
     /*background: #bc1818;*/
 }
 
+section {
+    padding: 60px 0;
+}
+
 /* ------------------- HEADINGS ------------------ */
+h1, h2 {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    letter-spacing: 4px;
+}
+
+
+h1 {
+    font-size: 4em;
+}
+
+h2 {
+    color: var(--font-color);
+    font-size: 2.5em;
+    font-weight: 300;
+    position: relative;
+}
+
+h2:before,
+h2:after {
+    display: inline-block;
+    content: "";
+    border-top: 0.1rem solid var(--primary-color);
+    width: 60px;
+    margin: 0 1rem;
+    transform: translateY(-0.9rem);
+}
+/* ------------------- SECTIONS ------------------ */
+
+section h2 {
+    text-align: center;
+}
 
 /* ------------------ PARAGRAPHS ----------------- */
 
@@ -87,6 +123,10 @@ header {
     background-attachment: fixed;
     height: 100vh;
     max-width: 100%;
+}
+
+header .row {
+    height: 60px;
 }
 
 #navbar {

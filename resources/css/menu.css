@@ -1,12 +1,12 @@
 .menu-wrap {
     position: relative;
-    display: block;
+    display: inline-block;
     float: right;
 }
 
 .menu-wrap .toggle {
     position: absolute;
-    top: 0;
+    top: 0px;
     right: 0;
     z-index: 5;
     cursor: pointer;
