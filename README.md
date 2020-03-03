@@ -75,3 +75,7 @@
 5. Establish a flow that corresponds to your content's message
 
 6. Use whitespace to build that flow
+
+##Icons to use
+gamepad (game development), code(C#), html, css
+cogs (machine learning), robot(AI), shield(IT-security), cube (3d modelling)
