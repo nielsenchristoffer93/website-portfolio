@@ -29,9 +29,9 @@
 
 <body>
     <!-------------------------- HEADER ----------------------->
-    <header>
+    <header id="home">
         <div class="row" id="navbar">
-            <a href="#">
+            <a href="#home">
                 <img src="resources/images/logo/cn_logo_white.png" alt="cn_logo_white.png" class="logo">
             </a>
             <div class="menu-wrap">
@@ -43,28 +43,29 @@
                     <div>
                         <div>
                             <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Resume</a></li>
-                                <li><a href="#">Projects</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#resume">Resume</a></li>
+                                <li><a href="#projects">Projects</a></li>
+                                <li><a href="#contact">Contact</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        
     </header>
     <div class="showcase">
         <div class="container showcase-inner">
             <h1>Welcome</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non pretium dui. Cras efficitur, urna eget suscipit efficitur, eros neque semper ante, nec congue felis risus quis neque.</p>
-            <a href="#" class="btn">&darr;</a>
         </div>
+        <a class="btn btn-ghost" href="#about"><i class="fas fa-arrow-down"></i></a>
     </div>
 
     <!---------------------- ABOUT ME SECTION ----------------------->
-    <section class="section-about">
+    <section class="section-about" id="about">
         <h2>About me</h2>
         <div class="grid grid-pad">
             <div class="col-7-12">
@@ -142,17 +143,21 @@
     </section>
 
     <!---------------------- TIMELINE SECTION ----------------------->
-    <section class="section-timeline">
+    <section class="section-timeline" id="resume">
         <h2>Experiences</h2>
     </section>
 
     <!----------------------- RESUME SECTION ------------------------>
     <section class="section-resume">
         <h2>Resume</h2>
+        <div class="row">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <a class="btn btn-full" href="#">Download <i class="fas fa-download"></i></a>
+        </div>
     </section>
 
     <!---------------------- PROJECTS SECTION ----------------------->
-    <section class="section-projects">
+    <section class="section-projects" id="projects">
         <h2>Projects</h2>
         <div class="grid grid-pad">
             <div class="col-3-12">
@@ -171,11 +176,16 @@
     </section>
 
     <!---------------------- CONTACT SECTION ------------------------>
-    <section class="section-contact">
+    <section class="section-contact" id="contact">
         <h2>Contact me</h2>
     </section>
 
     <!--------------------------- FOOTER ---------------------------->
+    <footer>
+        <div class="row">
+
+        </div>
+    </footer>
 
 </body>
 
@@ -185,6 +195,4 @@
 <script src="https://kit.fontawesome.com/5c07e5c24f.js" crossorigin="anonymous"></script>
 
 <!------------ PERSONAL WRITTEN JAVASCRIPT FILES -------------->
-<script src="/resources/js/js_sticky_header.js"></script>
-
-</html>
+<script src="/resources/js/js_sticky_header.js"></script></html>

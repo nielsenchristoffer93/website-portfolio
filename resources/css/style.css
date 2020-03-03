@@ -3,7 +3,7 @@
 /* ----------------------------------------------- */
 
 :root {
-    --primary-color: rgba(13, 110, 139, 0.75); /*  */
+    --primary-color: rgba(13, 110, 139, 1); /*  */
     --overlay-color: rgba(24, 39, 51, 0.85);
     --font-color: rgb(155, 155, 155, 1);
     --menu-speed: 0.75s;
@@ -25,6 +25,11 @@ body {
     font-family: 'Roboto', 'Arial', sans-serif;
     line-height: 1.4;
     text-rendering: optimizeLegibility;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-y: scroll;
 }
 
 /* ----------------------------------------------- */
@@ -100,18 +105,39 @@ p {
 /* ------------------- BUTTONS ------------------- */
 
 .btn {
-    display: inline-block;
-    border: none;
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    margin-top: 1rem;
+    padding: 10px;
+    border: 3px solid var(--overlay-color);
+    transition: all 0.2s ease-in-out;
+    font-size: 120%;
     text-decoration: none;
-    transition: opacity 1s ease-in;
 }
 
-.btn:hover {
-    opacity: 0.7;
+.btn-ghost {
+    border-radius: 50%;
+    padding: 6px 10px;
+}
+
+.btn-full {
+    color: #FFF;
+    border-radius: 10px;
+    background-color: var(--overlay-color);
+}
+
+.btn-full:hover,
+.btn-full:active {
+    color: var(--overlay-color);
+    background-color: transparent;
+}
+
+.btn-ghost:visited,
+.btn-ghost:link {
+    color: var(--overlay-color);
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    background-color: var(--overlay-color);
+    color: #FFF;
 }
 
 /* ----------------------------------------------- */
@@ -143,7 +169,7 @@ header .row {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #fafafa;
+    background-color: var(--primary-color);
     box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
     transition: background-color 0.5s ease-in-out;
     transition: box-shadow 1s ease-in-out;
@@ -160,6 +186,7 @@ header .row {
 
 .showcase {
     position: absolute;
+    height: 100vh;
     width: 90%;
     top: 50%;
     left: 50%;
@@ -184,6 +211,12 @@ header .row {
 
 .showcase p {
     font-size: 1.3rem;
+}
+
+.showcase .btn {
+    position: absolute;
+    bottom: 40px;
+    transform: translate(-50%, 50%);
 }
 
 /* ----------------------------------------------- */
@@ -230,6 +263,32 @@ header .row {
 }
 
 /* ----------------------------------------------- */
+/* ---------------- RESUME SECTION --------------- */
+/* ----------------------------------------------- */
+
+.section-resume {
+    background-color: var(--primary-color);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    text-align: center;
+}
+
+.section-resume h2,
+.section-resume p {
+    color: #FFF;
+}
+
+.section-resume p{
+    font-size: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-resume h2:before,
+.section-resume h2:after {
+    border-top: 0.1rem solid var(--overlay-color);
+}
+
+/* ----------------------------------------------- */
 /* --------------- PROJECTS SECTION -------------- */
 /* ----------------------------------------------- */
 
@@ -247,3 +306,4 @@ header .row {
 /* ----------------------------------------------- */
 /* ------------------- FOOTER -------------------- */
 /* ----------------------------------------------- */
+

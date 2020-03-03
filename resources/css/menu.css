@@ -173,3 +173,13 @@
     -webkit-transition: color 0.4s ease;
     transition: color 0.4s ease;
 }
+
+.menu-wrap .menu ul li a:link,
+.menu-wrap .menu ul li a:visited {
+    color: #fff;
+}
+
+.menu-wrap .menu ul li a:hover,
+.menu-wrap .menu ul li a:active {
+    color: var(--primary-color);
+}
