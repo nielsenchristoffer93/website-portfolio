@@ -5,7 +5,7 @@
 :root {
     --primary-color: rgba(13, 110, 139, 0.75); /*  */
     --overlay-color: rgba(24, 39, 51, 0.85);
-    --font-color: rgb(185, 185, 185, 1);
+    --font-color: rgb(155, 155, 155, 1);
     --menu-speed: 0.75s;
 }
 
@@ -48,6 +48,9 @@ h1, h2 {
     letter-spacing: 4px;
 }
 
+h2, h3 {
+    font-weight: 300;
+}
 
 h1 {
     font-size: 4em;
@@ -56,7 +59,6 @@ h1 {
 h2 {
     color: var(--font-color);
     font-size: 2.5em;
-    font-weight: 300;
     position: relative;
 }
 
@@ -73,6 +75,7 @@ h2:after {
 
 section h2 {
     text-align: center;
+    margin-bottom: 20px;
 }
 
 /* ------------------ PARAGRAPHS ----------------- */
@@ -187,26 +190,60 @@ header .row {
 /* ---------------- ABOUT SECTION ---------------- */
 /* ----------------------------------------------- */
 
-.red {
-    background-color: red;
+.section-about .box {
+    background-color: #000;
     width: 100%;
-    height: 200px;
+    height: 500px;
 }
 
-.green {
-    background-color: green;
-    width: 100%;
-    height: 200px;
+/* ----------------------------------------------- */
+/* ---------------- SKILLS SECTION --------------- */
+/* ----------------------------------------------- */
+
+.section-skills {
+    background-color: #f8f8f8;
 }
 
-.yellow {
-    background-color: yellow;
+.section-skills .box {
+    /*background-color: #000;*/
     width: 100%;
-    height: 200px;
+    height: 300px;
+    color: var(--font-color);
+    text-align: center;
 }
 
-.blue {
-    background-color: blue;
-    width: 100%;
-    height: 200px;
+.section-skills i {
+    font-size: 400%;
+    margin-top: 20px;
+    color: var(--primary-color);
 }
+
+.section-skills h3 {
+    margin: 10px 0;
+    font-size: 150%
+}
+
+.section-skills p {
+    font-size: 100%;
+    text-align: justify;
+    padding: 0 15px;
+}
+
+/* ----------------------------------------------- */
+/* --------------- PROJECTS SECTION -------------- */
+/* ----------------------------------------------- */
+
+.section-projects .box {
+    background-color: #000;
+    width: 100%;
+    height: 500px;
+}
+
+/* ----------------------------------------------- */
+/* --------------- CONTACT SECTION --------------- */
+/* ----------------------------------------------- */
+
+
+/* ----------------------------------------------- */
+/* ------------------- FOOTER -------------------- */
+/* ----------------------------------------------- */
