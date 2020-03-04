@@ -32,6 +32,15 @@ html {
     overflow-y: scroll;
 }
 
+.clearfix {zoom: 1;}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
 /* ----------------------------------------------- */
 /* ------------- REUSABLE COMPONENTS ------------- */
 /* ----------------------------------------------- */
@@ -43,7 +52,8 @@ html {
     /*background: #bc1818;*/
 }
 
-section {
+section,
+footer {
     padding: 60px 0;
 }
 
@@ -76,17 +86,18 @@ h2:after {
     margin: 0 1rem;
     transform: translateY(-0.9rem);
 }
+
 /* ------------------- SECTIONS ------------------ */
 
 section h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
 
 /* ------------------ PARAGRAPHS ----------------- */
 
 p {
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 /* -------------------- LOGOS -------------------- */
@@ -138,6 +149,12 @@ p {
 .btn-ghost:active {
     background-color: var(--overlay-color);
     color: #FFF;
+}
+
+/* -------------------- LINKS -------------------- */
+
+a {
+    text-decoration: none;
 }
 
 /* ----------------------------------------------- */
@@ -292,10 +309,46 @@ header .row {
 /* --------------- PROJECTS SECTION -------------- */
 /* ----------------------------------------------- */
 
-.section-projects .box {
-    background-color: #000;
+.projects-showcase {
+    list-style: none;
     width: 100%;
-    height: 500px;
+}
+
+.projects-showcase li {
+    display: block;
+    float: left;
+    width: 50%;
+}
+
+.project-photo {
+    width: 100%;
+    height: 60vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.red {
+    width: inherit;
+    height: inherit;
+    background-color: red;
+}
+
+.green {
+    width: inherit;
+    height: inherit;
+    background-color: green;
+}
+
+.blue {
+    width: inherit;
+    height: inherit;
+    background-color: blue;
+}
+
+.yellow {
+    width: inherit;
+    height: inherit;
+    background-color: yellow;
 }
 
 /* ----------------------------------------------- */
@@ -307,3 +360,72 @@ header .row {
 /* ------------------- FOOTER -------------------- */
 /* ----------------------------------------------- */
 
+footer {
+    background-color: var(--primary-color);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    color: #FFF;
+    padding-bottom: 0;
+}
+
+footer p {
+    width: 100%;
+    display: inline-block;
+    font-size: 80%;
+    margin: 20px 0;
+}
+
+.footer-nav,
+.footer-nav-social-links {
+    list-style: none;
+    text-align: center;
+}
+
+.footer-nav li {
+    float: left;
+}
+
+.footer-nav-social-links li {
+    float: right;
+}
+
+.footer-nav li,
+.footer-nav-social-links li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-of-type {
+    margin-right: 0;
+}
+
+.footer-nav-social-links li:first-of-type{
+    margin-right: 0;
+}
+
+.footer-nav li a,
+.footer-nav-social-links li a {
+    color: #FFF;
+    transition: color 0.2s ease-in-out;
+}
+
+.footer-nav-social-links li i {
+    font-size: 150%;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active,
+.footer-nav-social-links li a:hover,
+.footer-nav-social-links li a:active {
+    color: var(--overlay-color);
+}
+
+.copyright {
+    background-color: var(--overlay-color);
+}
+
+.copyright p {
+    text-align: center;
+    font-size: 70%;
+    padding: 10px 0;
+    margin: 0;
+}
