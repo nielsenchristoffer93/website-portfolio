@@ -133,7 +133,7 @@ input[type="submit"] {
 .btn-full,
 input[type="submit"]{
     color: #FFF;
-    border-radius: 10px;
+    /*border-radius: 10px;*/
     background-color: var(--overlay-color);
 }
 
@@ -360,6 +360,19 @@ header .row {
     background-color: yellow;
 }
 
+#more-projects {
+    display: none;
+}
+
+.section-projects .row {
+    text-align: center;
+}
+
+.section-projects .btn {
+    display: inline-block;
+    margin-top: 20px;
+}
+
 /* ----------------------------------------------- */
 /* --------------- CONTACT SECTION --------------- */
 /* ----------------------------------------------- */
@@ -387,7 +400,8 @@ header .row {
 .contact-container textarea {
     padding: 10px 0;
     max-height: 600px;
-    min-height: 50px;
+    height: 45px;
+    min-height: 45px;
     max-width: 100%;
     min-width: 100%;
 }

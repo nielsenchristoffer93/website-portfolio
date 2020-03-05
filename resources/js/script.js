@@ -15,3 +15,16 @@ function myFunction() {
     header.classList.remove("sticky");
   }
 }
+
+// Show more projects when clicking on button.
+document.getElementById("show-more-projects").addEventListener("click", function()
+{
+    var projects = document.getElementById("more-projects");
+           
+    if(projects.style.display == "none"){
+        projects.style.display="block";
+    }
+    else {
+        projects.style.display="none";
+    }
+});
