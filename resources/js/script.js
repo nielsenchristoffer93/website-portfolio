@@ -28,12 +28,31 @@ $(document).ready(function () {
                 
         console.log("#more-projects display: " + projects.style.display);
 
-        if (projects.style.display == "none" || !projects.style.display) {
+        if (projects.style.display == "none" || !projects.style.display) 
+        {
+            // Show all projects.
             projects.style.display = "block";
+            
+            // Change Awesomefont icon.
             $(this).find('i').toggleClass('fas fa-arrow-up fas fa-arrow-down')
-        } else {
+            
+            // Scroll to id 'more-projects'
+            /*var projectSection = document.getElementById("more-projects");
+            projectSection.scrollIntoView();*/
+            $('html, body').animate({scrollTop: $('#projects').offset().top -60 }, 0);
+        } 
+        else 
+        {
+            // Hide every projects except top 4.
             projects.style.display = "none";
+            
+            // Change Awesomefont icon.
             $(this).find('i').toggleClass('fas fa-arrow-up fas fa-arrow-down')
+            
+            // Scroll to id 'projects'
+            /*var projectSectionAdded = document.getElementById("projects");
+            projectSectionAdded.scrollIntoView();*/
+            $('html, body').animate({scrollTop: $('#projects').offset().top -60 }, 0);
         }
     });
 });
