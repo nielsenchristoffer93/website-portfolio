@@ -3,9 +3,9 @@
 /* ----------------------------------------------- */
 
 :root {
-    --primary-color: rgba(13, 110, 139, 1);
-    /*  */
-    --overlay-color: rgba(24, 39, 51, 0.85);
+    --primary-color: rgba(0, 182, 180, 1);
+    --primary-color-dark: rgba(0, 148, 146, 1);
+    --overlay-color: rgba(0, 0, 0, 0.6);
     --font-color: #a5a5a5;
     --slightly-white: #f8f8f8;
     --menu-speed: 0.75s;
@@ -125,7 +125,7 @@ p {
 .btn,
 input[type="submit"] {
     padding: 10px;
-    border: 3px solid var(--overlay-color);
+    border: 3px solid var(--primary-color-dark);
     transition: all 0.2s ease-in-out;
     font-size: 120%;
     text-decoration: none;
@@ -140,25 +140,25 @@ input[type="submit"] {
 input[type="submit"] {
     color: #FFF;
     /*border-radius: 10px;*/
-    background-color: var(--overlay-color);
+    background-color: var(--primary-color-dark);
 }
 
 .btn-full:hover,
 .btn-full:active,
 input[type="submit"]:hover,
 input[type="submit"]:active {
-    color: var(--overlay-color);
+    color: #FFF;
     background-color: transparent;
 }
 
 .btn-ghost:visited,
 .btn-ghost:link {
-    color: var(--overlay-color);
+    color: var(--primary-color-dark);
 }
 
 .btn-ghost:hover,
 .btn-ghost:active {
-    background-color: var(--overlay-color);
+    background-color: var(--primary-color-dark);
     color: #FFF;
 }
 
@@ -173,17 +173,36 @@ a {
 /* ----------------------------------------------- */
 
 header {
-    /*background: url(../images/4k-wallpaper-calm-waters-dark-1252869.jpg) no-repeat center center/cover;*/
-    background-image: linear-gradient(rgba(13, 110, 139, 0.75), rgba(13, 110, 139, 0.75)), url(../images/4k-wallpaper-calm-waters-dark-1252869.jpg);
-    background-position: left top;
-    background-size: cover;
-    background-attachment: fixed;
+    position: relative;
     height: 100vh;
-    max-width: 100%;
+    width: 100%;
 }
 
+.bg {
+    background-image: linear-gradient(rgba(0, 148, 146, 0.6), rgba(0, 148, 146, 0.6)), url(../images/4k-scenic-view-of-mountain-during-evening.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*header {
+    /*background: url(../images/4k-wallpaper-calm-waters-dark-1252869.jpg) no-repeat center center/cover;*/
+/*height: 100vh;
+    max-width: 100%;
+    background-image: linear-gradient(rgba(0, 148, 146, 0.5), rgba(0, 148, 146, 0.5)), url(../images/4k-scenic-view-of-mountain-during-evening.jpg);
+    background-position: left top;
+    background-size: cover, contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}*/
+
 header .row {
+    position: fixed;
+    top: 0;
     height: 60px;
+    z-index: 4;
 }
 
 #navbar {
@@ -313,7 +332,7 @@ header .row {
 
 .section-resume h2:before,
 .section-resume h2:after {
-    border-top: 0.1rem solid var(--overlay-color);
+    border-top: 0.1rem solid var(--primary-color-dark);
 }
 
 /* ----------------------------------------------- */
@@ -347,6 +366,12 @@ header .row {
 .section-projects .btn {
     display: inline-block;
     margin-top: 20px;
+    color: var(--primary-color-dark);
+}
+
+.section-projects .btn-ghost:hover,
+.section-projects .btn-ghost:active {
+    color: #FFF;
 }
 
 /* ----------------------------------------------- */
@@ -425,6 +450,11 @@ header .row {
     color: var(--primary-color);
 }
 
+.section-contact input[type="submit"]:hover,
+.section-contact input[type="submit"]:active {
+    color: var(--primary-color-dark);
+}
+
 
 /* ----------------------------------------------- */
 /* ------------------- FOOTER -------------------- */
@@ -486,11 +516,11 @@ footer p {
 .footer-nav li a:active,
 .footer-nav-social-links li a:hover,
 .footer-nav-social-links li a:active {
-    color: var(--overlay-color);
+    color: var(--primary-color-dark);
 }
 
 .copyright {
-    background-color: var(--overlay-color);
+    background-color: var(--primary-color-dark);
 }
 
 .copyright p {
@@ -499,5 +529,3 @@ footer p {
     padding: 10px 0;
     margin: 0;
 }
-
-
