@@ -1,0 +1,28 @@
+/* On screens that are 800px or less. */
+@media screen and (max-width: 800px) {
+    
+    h2 {
+        font-size: 2em;
+    }
+    
+    h2:before,
+    h2:after {
+        width: 15px;
+    }
+    
+    .contact-container {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .contact-container form div label {
+        font-size: 90%;
+    }
+}
+
+/* On screens that are 800px or less. */
+@media screen and (max-width: 600px) {
+
+
+    
+}
