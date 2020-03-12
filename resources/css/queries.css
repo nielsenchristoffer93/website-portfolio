@@ -1,28 +1,192 @@
-/* On screens that are 800px or less. */
-@media screen and (max-width: 800px) {
+@media only screen and (max-width: 1399px) {
+
+    .section-about h3 {
+        font-size: 170%;
+        margin-bottom: 20px;
+    }
+
+    .section-about p {
+        line-height: 130%;
+    }
     
+    .profile-image {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 991px) {
+
+    .flexbox {
+        flex-wrap: wrap;
+    }
+
+    .about-image-box {
+        width: 100%;
+    }
+
+    .about-text-box {
+        width: 100%;
+        margin-top: 30px;
+        padding: 0;
+    }
+
+    .profile-image {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    h1 {
+        font-size: 300%;
+    }
+
+    .showcase p {
+        font-size: 80%;
+        line-height: 130%;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .signature {
+        width: 300px;
+    }
+
+    .profile-image {
+        width: 80%;
+    }
+
+}
+
+@media only screen and (max-width: 479px) {
+
+    h1 {
+        font-size: 250%;
+    }
+
+    .showcase p {
+        font-size: 80%;
+        line-height: 120%;
+        width: 100%
+    }
+
+    .profile-image {
+        width: 100%;
+    }
+
+    .section-about p {
+        line-height: 130%;
+        font-size: 80%;
+    }
+
+}
+
+
+
+
+
+
+
+/* On screens that are 575px or less. */
+/*@media screen and (max-width: 574px) {
+
+    .section-about .box {
+        position: relative;
+        height: 400px;
+        width: 100%;
+    }
+    
+    .section-about h3 {
+        font-size: 80%;
+    }
+
+    .section-about h2,
+    .section-about h3 {
+        margin-bottom: 15px;
+    }
+
+    .section-about p {
+        line-height: 130%;
+    }
+
+    .signature {
+        width: 300px;
+    }
+
+   .profile-image {
+        position: relative;
+       width: inherit;
+       height: inherit;
+    }
+}
+
+/* On screens that are 767px or less. */
+/*@media screen and (max-width:768){
+
+    .section-about .box {
+        position: relative;
+        height: 500px;
+    }
+
+    .profile-image {
+        height: 100%;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .signature {
+        margin-top: 30px;
+        position: relative;
+    }
+}
+
+/* On screens that are 800px or less. */
+/*@media screen and (max-width: 799px) {
+
     h2 {
         font-size: 2em;
     }
-    
+
     h2:before,
     h2:after {
         width: 15px;
     }
-    
+
     .contact-container {
         width: 100%;
         margin: 0;
     }
-    
+
     .contact-container form div label {
         font-size: 90%;
     }
 }
 
-/* On screens that are 800px or less. */
-@media screen and (max-width: 600px) {
 
+/* On screens that are 1200px or less. */
+/*@media screen and (max-width: 1199px) {
 
-    
+    .profile-image {
+        height: 80%;
+    }
+
+    .section-about p {
+        font-size: 80%;
+    }
+
+    .section-about h3 {
+        font-size: 160%;
+    }
 }
+
+/* On screens that are 1400px or less. */
+/*@media screen and (max-width: 1399px) {
+
+    .profile-image {
+        height: 80%;
+    }
+}
+*/
