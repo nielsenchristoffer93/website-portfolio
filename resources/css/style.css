@@ -63,12 +63,16 @@ html {
     display: flex;
 }
 
-section,
-footer {
+section{
     padding: 60px 0;
 }
 
+footer {
+    padding: 40px 0 60px 0;
+}
+
 /* ------------------- HEADINGS ------------------ */
+
 h1,
 h2 {
     font-family: 'Roboto', 'Arial', sans-serif;
@@ -147,8 +151,11 @@ input[type="submit"] {
 .btn-full,
 input[type="submit"] {
     color: #FFF;
+    font-size: 90%;
+    border-radius: 18px;
     /*border-radius: 10px;*/
     background-color: var(--primary-color-dark);
+    box-shadow: 0 0 0 3px var(--primary-color-light);
 }
 
 .btn-full:hover,
@@ -187,7 +194,7 @@ header {
 }
 
 .bg {
-    background-image: linear-gradient(rgba(0, 148, 146, 0.6), rgba(0, 148, 146, 0.6)), url(../images/4k-scenic-view-of-mountain-during-evening.jpg);
+    background-image: linear-gradient(rgba(0, 148, 146, 0.6), rgba(0, 148, 146, 0.6)), url(../images/photo-of-mountain-with-ice-covered-with-black-and-gray-cloud-640781.jpg);
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -508,7 +515,17 @@ header .row {
 /* ----------------------------------------------- */
 
 .section-projects {
-    padding: 60px 0 0 0;
+    padding: 60px 0 50px 0;
+    background-color: var(--slightly-white);
+}
+
+.section-projects h2 {
+    margin-bottom: 50px;
+}
+
+.section-projects .box {
+    min-width: 50%;
+    padding: 10px
 }
 
 .blue {
@@ -533,7 +550,7 @@ header .row {
 
 .section-projects .btn {
     display: inline-block;
-    margin-top: 18px;
+    margin-top: 20px;
     color: var(--primary-color-dark);
 }
 
@@ -632,8 +649,8 @@ footer {
 
 footer p {
     width: 100%;
+    font-size: 70%;
     display: inline-block;
-    font-size: 80%;
     margin: 20px 0;
 }
 
@@ -653,6 +670,7 @@ footer p {
 
 .footer-nav li,
 .footer-nav-social-links li {
+    font-size: 90%;
     display: inline-block;
     margin-right: 20px;
 }
@@ -688,7 +706,7 @@ footer p {
 
 .copyright p {
     text-align: center;
-    font-size: 70%;
+    font-size: 60%;
     padding: 10px 0;
     margin: 0;
 }
