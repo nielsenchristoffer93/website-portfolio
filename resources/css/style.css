@@ -339,7 +339,7 @@ header .row {
 }
 
 .section-skills .box {
-    padding:  0 25px 20px 25px;
+    padding: 0 25px 20px 25px;
     min-width: 25%;
     height: 100%;
     text-align: center;
@@ -366,7 +366,117 @@ header .row {
 /* -------------- EXPERIENCE SECTION ------------- */
 /* ----------------------------------------------- */
 
+.timeline {
+    position: relative;
+}
 
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: var(--font-color);
+}
+
+
+.timeline ul {
+    margin: 0;
+    padding: 0;
+}
+
+.timeline ul li {
+    list-style: none;
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+}
+
+.timeline ul li:nth-child(odd) {
+    float: left;
+    text-align: right;
+    clear: both;
+}
+
+.timeline ul li:nth-child(even) {
+    float: right;
+    text-align: left;
+    clear: both;
+}
+
+.timeline-content {
+    padding-bottom: 20px;
+}
+
+.timeline ul li:nth-child(odd):before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    right: -6px;
+    width: 10px;
+    height: 10px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #FFF;
+}
+
+.timeline ul li:nth-child(even):before {
+    content: '';
+    position: absolute;
+    top: 22px;
+    left: -4px;
+    width: 10px;
+    height: 10px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #FFF;
+}
+
+.timeline ul li h3 {
+    margin: -10px 0 0 0;
+    padding: 0;
+    font-weight: 400;
+    color: var(--primary-color);
+}
+
+.timeline ul li p {
+    margin: 10px 0 0 0;
+    padding: 0;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    color: var(--font-color);
+}
+
+.timeline ul li .timeline-time h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 90%;
+    font-weight: 400;
+    color: #FFF;
+}
+
+.timeline ul li:nth-child(odd) .timeline-time {
+    position: absolute;
+    top: 8px;
+    right: -195px;
+    padding: 8px 16px;
+    background: var(--primary-color);
+    color: #FFF;
+    border-radius: 18px;
+    box-shadow: 0 0 0 3px var(--primary-color-light);
+}
+
+
+.timeline ul li:nth-child(even) .timeline-time {
+    position: absolute;
+    top: 6px;
+    left: -195px;
+    padding: 8px 16px;
+    background: var(--primary-color);
+    color: #FFF;
+    border-radius: 18px;
+    box-shadow: 0 0 0 3px var(--primary-color-light);
+}
 
 /* ----------------------------------------------- */
 /* ---------------- RESUME SECTION --------------- */
