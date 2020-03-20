@@ -555,7 +555,7 @@ header .row {
 }
 
 .title,
-.section-projects .btn {
+.section-projects .modal-button {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -578,23 +578,25 @@ header .row {
     top: 30%;
 }
 
-.section-projects .btn {
+.section-projects .modal-button {
     opacity: 0;
 }
 
-.section-projects .box .btn {
+.section-projects .box .modal-button {
+    background-color: var(--primary-color-dark);
     color: #FFF;
     margin-top: 0;
     z-index: 1;
     transition: all 0.2s ease-in-out;
 }
 
-.section-projects .box .btn:hover,
-.section-projects .box .btn:active {
+.section-projects .box .modal-button:hover,
+.section-projects .box .modal-button:active {
     color: var(--primary-color);
+    background-color: transparent;
 }
 
-.section-projects .box:hover .btn {
+.section-projects .box:hover .modal-button {
     opacity: 1;
     transition: opacity 0.5s ease;
     cursor: pointer;
@@ -633,6 +635,7 @@ header .row {
 
 /* --------------------- MODAL ------------------- */
 
+/* The Modal (background) */
 .modal {
     display: none;
     /* Hidden by default */
@@ -640,6 +643,8 @@ header .row {
     /* Stay in place */
     z-index: 1;
     /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
     left: 0;
     top: 0;
     width: 100%;
@@ -652,207 +657,139 @@ header .row {
     /* Fallback color */
     background-color: rgba(0, 0, 0, 0.4);
     /* Black w/ opacity */
+    z-index: 3;
 }
 
-
+/* Modal Content */
 .modal-content {
     position: relative;
-    background-color: var(--slightly-white);
-    margin: 15% auto;
-    /* 15% from the top and centered */
-    padding: 20px;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
     border: 1px solid #888;
     width: 90%;
     height: auto;
-    /* Could be more or less, depending on screen size */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
 }
 
-.modal-container {
-    position: relative;
-    /*background-color: aqua;*/
-    width: 100%;
-    height: 100%;
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
 }
 
-.modal-container .flexbox {
-    min-height: 100%;
-    max-height: 100%;
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+.modal-content .close,
+.prev-button,
+.next-button {
+    color: var(--font-color-light);
+    font-size: 140%;
 }
 
 /* The Close Button */
-.btn-exit {
-    line-height: 0;
+.modal-content .close {
     position: absolute;
     top: 0;
     right: 0;
-    padding:  0 4px;
-    color: var(--font-color-light);
-    font-size: 160%;
-    z-index: 2;
-    transition: color 0.2s ease;
+    line-height: 1;
+    margin: 2px 5px 0 0;
 }
 
-.btn-exit:hover,
-.btn-exit:focus {
+.close:hover,
+.close:focus,
+.prev-button:hover,
+.prev-button:focus,
+.next-button:hover,
+.next-button:focus {
     color: var(--font-color);
     text-decoration: none;
     cursor: pointer;
 }
 
-/* --------------- MODAL SLIDESHOW --------------- */
-
-.slide-text-box,
-.slide-image-box {
-    position: relative;
-    height: 100%;
-    width: auto;
+.modal-content .modal-body {
+    max-height: 100%;
+    max-width: 100%;
+    margin: 30px;
+    /*background-color: aqua;*/
 }
 
-.slide-text-box {
-    color: var(--font-color);
-    text-align: left;
-    padding: 30px 20px 30px 40px;
-    float: left;
+.modal-text-box {
     width: 40%;
-    min-height: 100%;
-    /*background-color: antiquewhite;*/
+    height: auto;
 }
 
-.slide-image-box {
-    float: left;
+.modal-image-box {
     width: 60%;
-    height: 100%;
-    /*background-color: salmon;*/
+    height: auto;
 }
 
-.slide-image-box img {
+.modal-image-box img {
     display: block;
-    width: 100%;
+    max-width: 100%;
     min-height: 100%;
-    max-height: 100%;
 }
 
-.slide-text-box h4 {
-    margin-bottom: 10px;
-}
-
-.slide-text-box p {
-    text-align: justify;
-}
-
-/*
-.slideshow-container {
-    width: 100%;
-    max-height: 100%;
-    position: relative;
-    margin: auto;
-}
-
-.slides {
-    display: none;
-}
-
-.slide-text-box,
-.slide-image-box {
-    position: relative;
-    max-height: 100%;
-    width: auto;
-    margin-bottom: 0;
-}
-
-.slide-text-box {
-    width: 35%;
-    height: 100%;
-}
-
-.slide-image-box {
-    max-height: 100%;
-    width: 65%;
-}
-
-.slideshow-image {
-    max-width:100%;
-    max-height:100%;
-}
-*/
-
-.btn-prev,
-.btn-next {
+.prev-button,
+.next-button {
     position: absolute;
     top: 50%;
-    margin: 0 auto;
-    cursor: pointer;
-    color: var(--font-color-light);
-    padding:  0 4px;
-    font-size: 160%;
-    transition: color 0.2s ease;
+    width: auto;
+    transform: translateY(-50%);
 }
 
-.btn-prev {
+.prev-button {
     left: 0;
+    margin-left: 5px;
 }
 
-.btn-next {
+.next-button {
     right: 0;
-}
-
-.btn-prev:hover,
-.btn-prev:active,
-.btn-next:hover,
-.btn-next:active {
-    color: var(--font-color);
-}
-
-.dots-container {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    height: 20px;
+    margin-right: 5px;
 }
 
 /* The dots/bullets/indicators */
+.dot-container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
 .dot {
-    position: relative;
+    cursor: pointer;
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: var(--font-color-light);
+    background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
 }
 
-.active
-{
-    background-color: var(--font-color);
-}
-
-/* Fading animation */
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-    from {
-        opacity: .4
-    }
-
-    to {
-        opacity: 1
-    }
-}
-
-@keyframes fade {
-    from {
-        opacity: .4
-    }
-
-    to {
-        opacity: 1
-    }
+.active {
+    background-color: #717171;
 }
 
 /* ----------------------------------------------- */
