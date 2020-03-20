@@ -9,6 +9,7 @@
     --overlay-color: rgba(0, 0, 0, 0.6);
     --font-color: #969696;
     --font-color-light: #bbb;
+    --font-color-dark: #6a6a6a;
     --slightly-white: #f8f8f8;
     --menu-speed: 0.75s;
 }
@@ -706,6 +707,7 @@ header .row {
 .next-button {
     color: var(--font-color-light);
     font-size: 140%;
+    transition: color 0.3s ease;
 }
 
 /* The Close Button */
@@ -715,6 +717,7 @@ header .row {
     right: 0;
     line-height: 1;
     margin: 2px 5px 0 0;
+    z-index: 2; 
 }
 
 .close:hover,
@@ -723,7 +726,7 @@ header .row {
 .prev-button:focus,
 .next-button:hover,
 .next-button:focus {
-    color: var(--font-color);
+    color: var(--font-color-dark);
     text-decoration: none;
     cursor: pointer;
 }
@@ -731,18 +734,31 @@ header .row {
 .modal-content .modal-body {
     max-height: 100%;
     max-width: 100%;
-    margin: 30px;
+    /*margin: 30px;*/
     /*background-color: aqua;*/
 }
 
 .modal-text-box {
     width: 40%;
     height: auto;
+    text-align: left;
+    padding: 30px;
+    color: var(--font-color);
+}
+
+.modal-text-box h4 {
+    font-size: 120%;
+    margin-bottom: 10px;
+}
+
+.modal-text-box p {
+    text-align: justify;
 }
 
 .modal-image-box {
     width: 60%;
     height: auto;
+    
 }
 
 .modal-image-box img {
@@ -786,19 +802,20 @@ header .row {
 }
 
 .dot {
+    border: 1px solid #fff;
     cursor: pointer;
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: #bbb;
+    background-color: var(--font-color-light);
     border-radius: 50%;
     display: inline-block;
-    transition: background-color 0.6s ease;
+    transition: background-color 0.3s ease;
 }
 
 .active,
 .dot:hover {
-    background-color: #717171;
+    background-color: var(--font-color-dark);
 }
 
 /* Fading animation */
