@@ -343,7 +343,7 @@ header .row {
 }
 
 .profile-image {
-    width: 90%;
+    width: 80%;
     height: 100%;
 }
 
@@ -642,7 +642,7 @@ header .row {
     /* Hidden by default */
     position: fixed;
     /* Stay in place */
-    z-index: 1;
+    z-index: 3;
     /* Sit on top */
     padding-top: 100px;
     /* Location of the box */
@@ -658,7 +658,6 @@ header .row {
     /* Fallback color */
     background-color: rgba(0, 0, 0, 0.4);
     /* Black w/ opacity */
-    z-index: 3;
 }
 
 /* Modal Content */
@@ -996,4 +995,56 @@ footer p {
     font-size: 60%;
     padding: 10px 0;
     margin: 0;
+}
+
+
+/* ----------------------------------------------- */
+/* Animations */
+/* ----------------------------------------------- */
+
+.js--wp-1,
+.js--wp-2,
+.js--wp-3,
+.js--wp-4,
+.js--wp-5,
+.js--wp-6,
+.js--wp-7,
+.js--wp-8,
+.js--wp-9,
+.js--wp-10,
+.js--wp-11,
+.js--wp-12,
+.js--wp-13,
+.js--wp-14,
+.js--wp-15,
+.js--wp-16,
+.js--wp-17,
+.js--wp-18
+{
+    opacity: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated,
+.js--wp-4.animated,
+.js--wp-5.animated,
+.js--wp-6.animated,
+.js--wp-7.animated,
+.js--wp-8.animated,
+.js--wp-9.animated,
+.js--wp-10.animated,
+.js--wp-11.animated,
+.js--wp-12.animated,
+.js--wp-13.animated,
+.js--wp-14.animated,
+.js--wp-15.animated,
+.js--wp-16.animated,
+.js--wp-17.animated,
+.js--wp-18.animated
+{
+    
+    opacity: 1;
 }

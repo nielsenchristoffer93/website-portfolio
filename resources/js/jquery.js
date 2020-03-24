@@ -1,22 +1,153 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
-// Click event for any anchor tag that's href starts with #
-$('a[href^="#"]').click(function(event) {
+    // Click event for any anchor tag that's href starts with #
+    $('a[href^="#"]').click(function (event) {
 
-    // The id of the section we want to go to.
-    var id = $(this).attr("href");
+        // The id of the section we want to go to.
+        var id = $(this).attr("href");
 
-    // An offset to push the content down from the top.
-    var offset = 60;
+        // An offset to push the content down from the top.
+        var offset = 60;
 
-    // Our scroll target : the top position of the
-    // section that has the id referenced by our href.
-    var target = $(id).offset().top - offset;
+        // Our scroll target : the top position of the
+        // section that has the id referenced by our href.
+        var target = $(id).offset().top - offset;
 
-    // The magic...smooth scrollin' goodness.
-    $('html, body').animate({scrollTop:target}, 0);
+        // The magic...smooth scrollin' goodness.
+        $('html, body').animate({
+            scrollTop: target
+        }, 0);
 
-    //prevent the page from jumping down to our section.
-    event.preventDefault();
-});
+        //prevent the page from jumping down to our section.
+        event.preventDefault();
+    });
+    
+    /* Animations on scroll */
+    // About image animation.
+    $('.js--wp-1').waypoint(function(direction) {
+        $('.js--wp-1').addClass('animated fadeInLeft');
+    }, {
+        offset: '60%'
+    });
+    
+    // About Text animation.
+    $('.js--wp-2').waypoint(function(direction) {
+        $('.js--wp-2').addClass('animated fadeInRight');
+    }, {
+        offset: '60%'
+    });
+    
+    // Skills section animation.
+    $('.js--wp-3').waypoint(function(direction) {
+        $('.js--wp-3').addClass('animated fadeInUp');
+    }, {
+        offset: '60%'
+    });
+    
+    // Timeline content left animation.
+    $('.js--wp-4').waypoint(function(direction) {
+        $('.js--wp-4').addClass('animated fadeInLeft');
+    }, {
+        offset: '60%'
+    });
+    
+    // Timeline time right animation.
+    $('.js--wp-5').waypoint(function(direction) {
+        $('.js--wp-5').addClass('animated fadeInRight');
+    }, {
+        offset: '60%'
+    });
+    
+    // Timeline content right animation.
+    $('.js--wp-6').waypoint(function(direction) {
+        $('.js--wp-6').addClass('animated fadeInRight');
+    }, {
+        offset: '60%'
+    });
+    
+    // Timeline time left animation.
+    $('.js--wp-7').waypoint(function(direction) {
+        $('.js--wp-7').addClass('animated fadeInLeft');
+    }, {
+        offset: '60%'
+    });
+    
+    // Timeline content left animation.
+    $('.js--wp-8').waypoint(function(direction) {
+        $('.js--wp-8').addClass('animated fadeInLeft');
+    }, {
+        offset: '60%'
+    });
+    
+    // Timeline time right animation.
+    $('.js--wp-9').waypoint(function(direction) {
+        $('.js--wp-9').addClass('animated fadeInRight');
+    }, {
+        offset: '60%'
+    });
+    
+    // Timeline content right animation.
+    $('.js--wp-10').waypoint(function(direction) {
+        $('.js--wp-10').addClass('animated fadeInRight');
+    }, {
+        offset: '60%'
+    });
+    
+    // Timeline time left animation.
+    $('.js--wp-11').waypoint(function(direction) {
+        $('.js--wp-11').addClass('animated fadeInLeft');
+    }, {
+        offset: '60%'
+    });
+    
+    // Timeline content left animation.
+    $('.js--wp-12').waypoint(function(direction) {
+        $('.js--wp-12').addClass('animated fadeInLeft');
+    }, {
+        offset: '75%'
+    });
+    
+    // Timeline time right animation.
+    $('.js--wp-13').waypoint(function(direction) {
+        $('.js--wp-13').addClass('animated fadeInRight');
+    }, {
+        offset: '75%'
+    });
+    
+    // First 2 projects boxes animation.
+    $('.js--wp-14').waypoint(function(direction) {
+        $('.js--wp-14').addClass('animated fadeInUp');
+    }, {
+        offset: '60%'
+    });
+    
+    // 3 and 4 projects boxes animation.
+    $('.js--wp-15').waypoint(function(direction) {
+        $('.js--wp-15').addClass('animated fadeInUp');
+    }, {
+        offset: '60%'
+    });
+    
+    // 5 and 6 projects boxes animation.
+    $('.js--wp-16').waypoint(function(direction) {
+        $('.js--wp-16').addClass('animated fadeInUp');
+    }, {
+        offset: '60%'
+    });
+    
+    // 7 and 8 projects boxes animation.
+    $('.js--wp-17').waypoint(function(direction) {
+        $('.js--wp-17').addClass('animated fadeInUp');
+    }, {
+        offset: '60%'
+    });
+    
+    // Contact form animation.
+    $('.js--wp-18').waypoint(function(direction) {
+        $('.js--wp-18').addClass('animated fadeInRight');
+    }, {
+        offset: '75%'
+    });
+    
+    
 });
